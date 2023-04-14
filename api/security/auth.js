@@ -5,6 +5,7 @@ var jwt = require("jsonwebtoken");
 var users_1 = require("../model/users");
 var api_config_1 = require("./api-config");
 var handleAuthentication = function (req, resp) {
+    console.log("Entered");
     var user = req.body;
     if (isValid(user)) {
         var dbUser = users_1.users[user.email];

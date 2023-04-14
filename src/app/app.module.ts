@@ -30,6 +30,8 @@ import {NotFoundComponent} from './components/not-found/not-found.component';
 import {ApplicationErrorHandler} from './app.error-handler';
 import { LoginComponent } from './components/security/login/login.component';
 import { UserDetailComponent } from './components/header/user-detail/user-detail.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -55,6 +57,7 @@ import { UserDetailComponent } from './components/header/user-detail/user-detail
         BrowserModule,
         BrowserAnimationsModule,
         HttpClientModule,
+        FormsModule,
         SharedModule.forRoot(),
         RouterModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules})
     ],

@@ -36,4 +36,8 @@ export class LoginService {
     logout() {
         this.user = undefined;
     }
+
+    sendReservationDetails(body:any){
+        return this.http.post(`${RESTAURANT_API}/reservation`,body)
+    }
 }
