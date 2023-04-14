@@ -15,7 +15,8 @@
     "emailjs": "^4.0.1",
     "json-serve": "^0.1.0",
     "json-server": "^0.17.3",
-    "nodemailer": "^6.9.1"
+    "nodemailer": "^6.9.1",
+    "@types/jsonwebtoken": "7.2.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
