@@ -5,6 +5,7 @@ const https = require("https");
 const fs = require("fs");
 const auth_1 = require("./security/auth");
 const authz_1 = require("./security/authz");
+var email  = require('emailjs/email');
 
 const server = jsonServer.create()
 const router = jsonServer.router(path.join(__dirname, 'db.json'))

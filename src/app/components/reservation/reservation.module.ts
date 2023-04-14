@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {ReservationComponent} from './reservation.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -10,7 +11,7 @@ const ROUTES: Routes = [
 
 @NgModule({
     declarations: [ReservationComponent],
-    imports: [RouterModule.forChild(ROUTES)]
+    imports: [SharedModule,RouterModule.forChild(ROUTES)]
 })
 
 export class ReservationModule {

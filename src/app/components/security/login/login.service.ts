@@ -40,4 +40,8 @@ export class LoginService {
     sendReservationDetails(body:any){
         return this.http.post(`${RESTAURANT_API}/reservation`,body)
     }
+
+    getDetailsOfReservation() {
+        return this.http.get(`${RESTAURANT_API}/reservation`)
+    }
 }

@@ -1,6 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
-import {HashLocationStrategy, LocationStrategy, registerLocaleData} from '@angular/common';
+import {CommonModule, HashLocationStrategy, LocationStrategy, registerLocaleData} from '@angular/common';
 import {ErrorHandler, LOCALE_ID, NgModule} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import locatePt from '@angular/common/locales/pt';
@@ -30,7 +30,7 @@ import {NotFoundComponent} from './components/not-found/not-found.component';
 import {ApplicationErrorHandler} from './app.error-handler';
 import { LoginComponent } from './components/security/login/login.component';
 import { UserDetailComponent } from './components/header/user-detail/user-detail.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -55,6 +55,8 @@ import { FormsModule } from '@angular/forms';
     ],
     imports: [
         BrowserModule,
+        ReactiveFormsModule,
+        CommonModule,
         BrowserAnimationsModule,
         HttpClientModule,
         FormsModule,

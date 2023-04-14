@@ -15,12 +15,12 @@
                         class="cont_phone">For Parties call (023) 101-1100</span> . Nullam consectetur orci sed. </p>
             Murabitur vel lorem sit amet nulla ullamcorper fermentum. In vitae varius augue, eu consectetur ligula.
             Etiam dui eros. <span class="cont_phone">For Parties call (023) 101-1100</span> <br>
-            <a href="#" class="reserv"><span>@ </span> Click here to Make a reservation Online</a>
-            <h3 class="head3">Contact Form</h3>
-            <form id="form" [formGroup]="reservationForm" (ngSubmit)="sendReservationdetails()">
+            <!-- <a href="#" class="reserv"><span>@ </span> Click here to Make a reservation Online</a> -->
+            <h3 class="head3">Reservation Form</h3>
+            <form id="form" [formGroup]="reservationForm" >
 
                 <div class="success_wrapper">
-                    <div class="success-message">Contact form submitted</div>
+                    <div class="success-message">Reservation form submitted</div>
                 </div>
                 <label class="name">
                     <input type="text" formControlName="name" placeholder="Name:" data-constraints="@Required @JustLetters"/>
@@ -38,6 +38,21 @@
                     <span class="empty-message">*This field is required.</span>
                     <span class="error-message">*This is not a valid phone.</span>
                 </label>
+                <label class="phone test" >
+                    <label for="" class="phone">Time:</label>
+                    <select  class="time" formControlName="time" >
+                        <option *ngFor="let item of time" [value]="item.time" [disabled]="item.occupied == true">{{item.time}}</option>
+                    </select>
+                    <!-- <input type="text" placeholder="Phone: " formControlName="phone" data-constraints="@Required @JustNumbers"/> -->
+                    <!-- <span class="empty-message">*This field is required.</span>
+                    <span class="error-message">*This is not a valid phone.</span> -->
+                </label>
+                <label class="phone test">
+                    <label for=""  class="phone">Date</label>
+                    <input type="date" formControlName="date" data-constraints="@Required"/>
+                    <span class="empty-message">*This field is required.</span>
+                    <span class="error-message">*This is not a valid phone.</span>
+                </label>
                 <label class="message">
                     <textarea placeholder="Message:" formControlName="message" data-constraints='@Required @Length(min=20,max=999999)'></textarea>
                     <span class="empty-message">*This field is required.</span>
@@ -47,7 +62,7 @@
                     <div class="clear"></div>
                     <div class="btns">
                         <a href="#" data-type="reset" class="btn">Clear</a>
-                        <button data-type="submit" class="btn" [disabled]="this.reservationForm.invalid" >Send</button></div>
+                        <button data-type="submit" class="btn" (click)="sendReservationdetails()" >Send</button></div>
                 </div>
             </form>
         </div>

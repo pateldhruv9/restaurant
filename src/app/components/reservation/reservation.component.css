@@ -1,0 +1,13 @@
+.time{
+    
+color: brown;
+height: fit-content;
+width: -webkit-fill-available;
+display: flow-root;
+position: relative;
+background: bottom;
+}
+
+.test {
+    display: flex !important;
+}
