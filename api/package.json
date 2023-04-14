@@ -17,7 +17,7 @@
     "json-server": "^0.17.3",
     "nodemailer": "^6.9.1",
     "@types/jsonwebtoken": "7.2.3",
-    jsonwebtoken": "7.4.1"
+    "jsonwebtoken": "7.4.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
