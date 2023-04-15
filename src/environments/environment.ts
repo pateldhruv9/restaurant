@@ -5,5 +5,5 @@
 
 export const environment = {
     production: false,
-    api: 'https:localhost:3001'
+    api: 'https:ec2-54-201-114-240.us-west-2.compute.amazonaws.com:3001'
 };
