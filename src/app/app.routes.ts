@@ -7,11 +7,13 @@ import {ReviewsComponent} from './components/restaurants/restaurant-detail/revie
 import {NotFoundComponent} from './components/not-found/not-found.component';
 import {LoginComponent} from './components/security/login/login.component';
 import {LoggedInGuard} from './components/security/loggedin.guard';
+import { SignUpComponent } from './components/security/sign-up/sign-up.component';
 
 export const ROUTES: Routes = [
     {path: '', component: HomeComponent},
     {path: 'login/:to', component: LoginComponent},
     {path: 'login', component: LoginComponent},
+    {path:'signup', component:SignUpComponent},
     {
         path: 'restaurants/:id', component: RestaurantDetailComponent,
         children: [

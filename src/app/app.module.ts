@@ -31,6 +31,7 @@ import {ApplicationErrorHandler} from './app.error-handler';
 import { LoginComponent } from './components/security/login/login.component';
 import { UserDetailComponent } from './components/header/user-detail/user-detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SignUpComponent } from './components/security/sign-up/sign-up.component';
 
 
 
@@ -51,7 +52,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         ReviewsComponent,
         NotFoundComponent,
         LoginComponent,
-        UserDetailComponent
+        UserDetailComponent,
+        SignUpComponent
     ],
     imports: [
         BrowserModule,

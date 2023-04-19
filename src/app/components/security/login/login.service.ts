@@ -25,6 +25,10 @@ export class LoginService {
             .pipe(tap(user => this.user = user));
     }
 
+    signUp(email: string, password: string, name:string){
+        return this.http.post(`${RESTAURANT_API}/signUp`,{email: email, password: password, name:name})
+    }
+
     isLoggedIn(): boolean {
         return this.user !== undefined;
     }

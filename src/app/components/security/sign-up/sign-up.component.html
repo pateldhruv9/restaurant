@@ -1,0 +1,41 @@
+<div class="content login">
+  <div class="container_12">
+      
+      <div class="grid_12">
+          <h4 class="title-login">chips&chops | SignUp</h4>
+
+          <p class="sub-title-login">
+              welcome to our restaurant
+          </p>
+
+          <form [formGroup]="loginForm">
+
+              <lacc-input-container [showTip]="false">
+                  <input type="text" formControlName="email" class="form-control" placeholder="Email">
+              </lacc-input-container>
+
+              
+              <lacc-input-container>
+                <input type="text" formControlName="name" class="form-control" placeholder="name">
+            </lacc-input-container>
+
+              <lacc-input-container>
+                  <input type="password" formControlName="password" class="form-control" placeholder="Password">
+              </lacc-input-container>
+
+
+              <div class="row">
+                  <!-- /.col -->
+                  <div class="col-xs-offset-8 col-xs-4">
+                      <button [disabled]="loginForm.invalid"
+                              (click)="login()"
+                              type="submit" class="btn btn-primary btn-block btn-flat">
+                          SignUp
+                      </button>
+                  </div>
+                  <!-- /.col -->
+              </div>
+          </form>
+      </div>
+  </div>
+</div>
