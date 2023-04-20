@@ -6,6 +6,7 @@ const fs = require("fs");
 const auth_1 = require("./security/auth");
 const authz_1 = require("./security/authz");
 let user = require("./model/users")
+// import { userCall } from './model/users';
 // { User, users } from './model/users';
 //var email  = require('emailjs/email');
 // import { User } from './model/users';
@@ -16,17 +17,21 @@ const middlewares = jsonServer.defaults()
 server.use(cors())
 server.use(jsonServer.bodyParser)
 server.post('/login', auth_1.handleAuthentication);
-server.use('/signUp',(req,res)=>{
-    console.log(req.body,"req&res")
-    let mail = res.email
-    new user.User(req.body.email,req.body.name,req.body.password) 
+server.post('/signUp',(req,res)=>{
+   
+    // toCall(req.body)
 })
 //server.post('/login', (req,res)=>{console.log("Entered")});
 server.use(middlewares)
 server.use(router)
 
+// var toCall = function(body) {
+//     server.use('/users',authz_1.handleAuthorization)
+
+// }
 server.use('/orders', authz_1.handleAuthorization);
 server.use('/reservation', authz_1.handleAuthorization);
+server.use('/users',authz_1.handleAuthorization)
 
 
 var options = {

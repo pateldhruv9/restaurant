@@ -308,5 +308,19 @@
       "time": "11:00-12:00",
       "id": 4
     }
+  ],
+  "users": [
+    {
+      "email": "luis@gmail.com",
+      "name": "meg",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "email": "hpbarot472000@gmail.com",
+      "password": "Sagar@123",
+      "name": "sagar@simformsolutions.com",
+      "id": 2
+    }
   ]
 }

@@ -26,7 +26,7 @@ export class LoginService {
     }
 
     signUp(email: string, password: string, name:string){
-        return this.http.post(`${RESTAURANT_API}/signUp`,{email: email, password: password, name:name})
+        return this.http.post(`${RESTAURANT_API}/users`,{email: email, password: password, name:name})
     }
 
     isLoggedIn(): boolean {
