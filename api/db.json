@@ -321,6 +321,42 @@
       "password": "Sagar@123",
       "name": "sagar@simformsolutions.com",
       "id": 2
+    },
+    {
+      "email": "te@te.com",
+      "password": "te",
+      "name": "te",
+      "id": 3
+    },
+    {
+      "email": "jenildarji11@gmail.com",
+      "password": "123456",
+      "name": "jenil",
+      "id": 4
+    },
+    {
+      "email": "jenildarji@gmail.com",
+      "password": "123456",
+      "name": "jenil",
+      "id": 5
+    },
+    {
+      "email": "jenildarji@gmail.com",
+      "password": "123456",
+      "name": "jenil",
+      "id": 6
+    },
+    {
+      "email": "dhruvpatel@gmail.com",
+      "password": "123456",
+      "name": "dhruv",
+      "id": 7
+    },
+    {
+      "email": "jenildarji@gmail.com",
+      "password": "123456",
+      "name": "jenil",
+      "id": 8
     }
   ]
 }
